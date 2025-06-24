@@ -31,7 +31,7 @@ export function Hero() {
     <section id="hero" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <Image
-          src="public\1 (2).webp"
+          src="/1 (2).webp"
           alt="Мастер в кожаных перчатках работает с изделием из крокодиловой кожи"
           fill
           className="object-cover opacity-70"
