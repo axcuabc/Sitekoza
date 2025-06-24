@@ -169,7 +169,7 @@ export function Reviews() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="public\3 (1).webp"
+          src="/3 (1).webp"
           alt="Интерьер кожевенной мастерской с готовыми изделиями и инструментами"
           fill
           className="object-cover"
