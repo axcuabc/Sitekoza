@@ -128,7 +128,7 @@ export function Navbar() {
           className="flex items-center hover:opacity-80 transition-opacity duration-300 touch-manipulation"
         >
           <Image
-            src="public\photo_2025-06-10_16-55-21-removebg-preview (1) (1).webp"
+            src="/photo_2025-06-10_16-55-21-removebg-preview (1) (1).webp"
             alt="Obsidian Hide Logo"
             width={80}
             height={80}
@@ -251,7 +251,7 @@ export function Navbar() {
             {/* Logo at top */}
             <div className="flex justify-center pt-8 pb-4">
               <Image
-                src="public\photo_2025-06-10_16-55-21-removebg-preview (1) (1).webp"
+                src="/photo_2025-06-10_16-55-21-removebg-preview (1) (1).webp"
                 alt="Obsidian Hide Logo"
                 width={60}
                 height={60}
