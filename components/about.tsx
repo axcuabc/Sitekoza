@@ -41,7 +41,7 @@ export function About() {
             <ScrollAnimation animation="fadeInRight" delay={300}>
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg shadow-xl shadow-golden/5">
                 <Image
-                  src="public\2 (2).webp"
+                  src="/2 (2).webp"
                   alt="Мастер в фартуке сосредоточенно работает над сумкой из крокодиловой кожи в мастерской"
                   fill
                   className="object-cover"
