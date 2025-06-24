@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 38 68% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 9%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 38 68% 58%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 38 68% 58%;
+  --radius: 0.5rem;
+}
+
+body {
+  @apply bg-black text-white font-sans;
+}
+
+html {
+  /* Disable native smooth scrolling to use custom implementation */
+  scroll-behavior: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e4b045;
+}
+
+/* Smooth scroll container */
+.smooth-scroll-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Enhanced focus states for accessibility */
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #e4b045;
+  outline-offset: 2px;
+}
+
+/* Smooth transitions for all interactive elements */
+button,
+input,
+textarea,
+a {
+  transition: all 0.3s ease;
+}
+
+/* Performance optimizations */
+.scroll-animation {
+  will-change: transform, opacity;
+}
+
+/* Parallax effect for hero section */
+.parallax-bg {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+/* Smooth scrolling performance optimizations */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .smooth-scroll-container {
+    /* Disable smooth scrolling for users who prefer reduced motion */
+    pointer-events: none;
+  }
+
+  .smooth-scroll-container * {
+    pointer-events: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Improve text rendering during smooth scroll */
+.smooth-scroll-container {
+  text-rendering: optimizeSpeed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* Prevent layout shifts during smooth scrolling */
+body {
+  overflow-x: hidden;
+}
+
+/* Custom scroll indicator */
+.scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #e4b045 0%, #c68e17 100%);
+  transform-origin: left;
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+}
+
+/* Scroll to top button animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.scroll-to-top-enter {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.scroll-to-top-exit {
+  animation: fadeOut 0.3s ease-out forwards;
+}
+
+/* Улучшенная производительность для плавной прокрутки */
+.smooth-scroll-container * {
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Оптимизация для GPU ускорения */
+.smooth-scroll-container {
+  transform: translateZ(0);
+  will-change: scroll-position;
+}
