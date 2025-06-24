@@ -40,7 +40,7 @@ export function Products() {
 
   const products = [
     
-      [
+[
   {
     id: 1,
     description: "Черный ремень из кожи крокодила с золотой пряжкой премиального качества",
@@ -152,7 +152,6 @@ export function Products() {
     price: "6 100 ₽",
   },
 ]
-
 
   const categories = [
     { id: "все", name: "Все изделия" },
