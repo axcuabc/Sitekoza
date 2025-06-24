@@ -55,7 +55,7 @@ export function Blog() {
             <ScrollAnimation animation="fadeInRight" delay={300}>
               <div className="relative h-64 sm:h-80 md:h-96 lg:h-[500px] overflow-hidden rounded-lg shadow-xl shadow-golden/5">
                 <Image
-                  src="public\4 (1).webp"
+                  src="/4 (1).webp"
                   alt="Инструменты и материалы для работы с кожей крокодила: ножницы, шило, нитки, молотки и кожаные изделия"
                   fill
                   className="object-cover"
